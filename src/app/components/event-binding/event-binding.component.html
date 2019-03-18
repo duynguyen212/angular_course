@@ -1,0 +1,31 @@
+<div class="panel panel-danger">
+  <div class="panel panel-heading">
+    <h3>
+      Data Binding - View to Component
+      <span class="label label-danger">Event Binding</span>
+    </h3>
+  </div>
+  <div class="panel panel-body">
+    <button class="btn btn-info" (click)="onClickMe()">Click Me</button>
+    <button class="btn btn-warning" (click)="onCounting()">Count</button>
+    <p>Count is : {{ count }}</p>
+
+    <hr />
+    <h5>{{ username }}</h5>
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" (keyup)="onKeyUp($event)" />
+    </div>
+
+    <hr />
+    <h5>Result (after you press Enter) : {{ name }}</h5>
+    <div class="form-group">
+      <label>Name</label>
+      <input
+        type="text"
+        class="form-control"
+        (keyup.enter)="onEnterKeyUp($event)"
+      />
+    </div>
+  </div>
+</div>

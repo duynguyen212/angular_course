@@ -1,0 +1,79 @@
+<!-- Interpolation -->
+<div class="panel panel-info">
+  <div class="panel panel-heading">
+    <h3>
+      Data Binding -
+      <span class="label label-danger">Interpolation</span>
+    </h3>
+  </div>
+  <div class="panel panel-body">
+    <h4>Name: {{ authorName }}</h4>
+    <h4>Range of Age : {{ age > 18 ? "Not be too young" : "Too young" }}</h4>
+    <h4>Marital Status: {{ isMarried }}</h4>
+    <h4>Marital Status: {{ isMarried ? "Married" : "Single" }}</h4>
+    <hr />
+    <h4>{{ showObject() }}</h4>
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel panel-heading">
+    <h3>
+      Data Binding -
+      <span class="label label-danger">Property Binding</span>
+    </h3>
+  </div>
+  <div class="panel panel-body">
+    <img [src]="imgLink" alt="BMW" width="500" />
+    <hr />
+    <input type="text" class="form-control" [value]="authorName" />
+
+    <hr />
+    <button class="btn btn-success" [disabled]="!isValid">Valid</button>
+  </div>
+
+  <table [attr.border]="0" [attr.width]="500">
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Date Created</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Tao Lao Object</td>
+      <td>18/03/2019</td>
+    </tr>
+  </table>
+</div>
+
+<table [class.table-bordered]="!isBordered">
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Date Created</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Tao Lao</td>
+    <td>18/04/2019</td>
+  </tr>
+</table>
+
+<hr />
+
+<label
+  for=""
+  class="label"
+  [class.label-danger]="isChecked === 1"
+  [class.label-success]="isChecked !== 1"
+  >Test Class Binding</label
+>
+<hr />
+<div
+  [style.background-color]="isBordered ? 'red' : 'green'"
+  [style.color]="'#fff'"
+  [style.height]="'50px'"
+  [style.line-height.px]="'50'"
+>
+  Lap trinh Angular
+</div>
